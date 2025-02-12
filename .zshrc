@@ -81,6 +81,8 @@ alias esrc='vim ~/.zshrc'
 alias enix='vim ~/.config/nix/flake.nix'
 alias nixupdate='cd ~/.config/nix/ && nix flake update && cd'
 alias nix-rebuild='darwin-rebuild switch --flake ~/.config/nix#macbook'
+alias ..='cd ..'
+alias ...='cd ../..'
 
 # Default editor
 export EDITOR=nvim
