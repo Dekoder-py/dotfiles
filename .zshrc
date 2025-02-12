@@ -6,6 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Set the directory to store Zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -77,6 +78,12 @@ alias e='exit'
 alias vim='nvim'
 alias src='source ~/.zshrc'
 alias esrc='vim ~/.zshrc'
+alias enix='vim ~/.config/nix/flake.nix'
+alias nixupdate='cd ~/.config/nix/ && nix flake update && cd'
+alias nix-rebuild='darwin-rebuild switch --flake ~/.config/nix#macbook'
+
+# Default editor
+export EDITOR=nvim
 
 # Shell integrations
 eval "$(fzf --zsh)"
