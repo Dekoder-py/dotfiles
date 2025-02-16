@@ -1,3 +1,7 @@
-# My dotfiles\
+ My dotfiles
 
-Clone the repo and use 'stow .'
+[!TIP] Clone the repo and use 'stow .'
+
+## Test
+
+hello! welcome
