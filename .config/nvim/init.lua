@@ -24,8 +24,8 @@ require 'plugins.treesitter',
 require 'plugins.render-markdown',
 require 'plugins.markdown-preview',
 require 'plugins.alpha',
-require 'plugins.lsp',
-require 'plugins.telescope',
+-- require 'plugins.lsp',
+-- require 'plugins.telescope',
 })
 
 vim.cmd[[colorscheme tokyonight]]
