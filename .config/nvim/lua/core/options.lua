@@ -16,6 +16,7 @@ vim.opt.termguicolors = true
 vim.o.swapfile = false
 vim.o.smartindent = true
 vim.o.showtabline = 2
+vim.o.showmode = false
 vim.o.backspace = 'indent,eol,start'
 vim.wo.signcolumn = 'yes'
 vim.o.pumheight = 10
