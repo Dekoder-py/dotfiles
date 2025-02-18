@@ -2671,6 +2671,6 @@ font_size        17
 
 
 # BEGIN_KITTY_THEME
-# Catppuccin-Mocha
+# Nord
 include current-theme.conf
 # END_KITTY_THEME
