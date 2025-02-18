@@ -23,5 +23,3 @@ require 'plugins.lualine',
 })
 
 
--- [[ Set colorscheme to catppuccin ]]
-vim.cmd.colorscheme "catppuccin"
