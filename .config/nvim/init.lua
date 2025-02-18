@@ -20,6 +20,7 @@ require 'plugins.colortheme',
 require 'plugins.lazygit',
 require 'plugins.bufferline',
 require 'plugins.lualine',
+require 'plugins.treesitter',
 })
 
 
