@@ -13,3 +13,5 @@ shell-integration = zsh
 shell-integration-features = true
 
 window-decoration = none
+window-height = 9999
+window-width = 9999
