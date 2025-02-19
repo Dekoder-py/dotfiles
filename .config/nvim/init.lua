@@ -26,7 +26,6 @@ require('lazy').setup {
   require 'plugins.lsp',
   require 'plugins.none-ls',
   require 'plugins.render-markdown',
-  require 'plugins.markdown-preview',
   require 'plugins.snacks',
   require 'plugins.autocompletion',
   require 'plugins.gitsigns',
