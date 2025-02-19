@@ -1,5 +1,6 @@
 require 'core.options'
 require 'core.keymaps'
+require 'core.snippets'
 
 -- [[ Install `lazy.nvim` plugin manager ]]
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -14,20 +15,24 @@ vim.opt.rtp:prepend(lazypath)
 
 -- [[ Configure and install plugins ]]
 -- NOTE: Here is where you install your plugins.
-require('lazy').setup({
-require 'plugins.neotree',
-require 'plugins.colortheme',
-require 'plugins.lazygit',
-require 'plugins.bufferline',
-require 'plugins.lualine',
-require 'plugins.treesitter',
-require 'plugins.telescope',
-require 'plugins.lsp',
-require 'plugins.render-markdown',
-require 'plugins.markdown-preview',
-require 'plugins.alpha',
-require 'plugins.autocompletion',
-})
+require('lazy').setup {
+  require 'plugins.neotree',
+  require 'plugins.colortheme',
+  require 'plugins.lazygit',
+  require 'plugins.bufferline',
+  require 'plugins.lualine',
+  require 'plugins.treesitter',
+  require 'plugins.telescope',
+  require 'plugins.lsp',
+  require 'plugins.none-ls',
+  require 'plugins.render-markdown',
+  require 'plugins.markdown-preview',
+  require 'plugins.alpha',
+  require 'plugins.autocompletion',
+  require 'plugins.gitsigns',
+  require 'plugins.indent-blankline',
+  require 'plugins.misc',
+  require 'plugins.comment',
+}
 
-vim.cmd.colorscheme "catppuccin"
-
+vim.cmd.colorscheme 'catppuccin'
