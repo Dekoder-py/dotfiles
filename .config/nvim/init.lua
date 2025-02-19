@@ -22,9 +22,11 @@ require 'plugins.bufferline',
 require 'plugins.lualine',
 require 'plugins.treesitter',
 require 'plugins.telescope',
+require 'plugins.lsp',
 require 'plugins.render-markdown',
 require 'plugins.markdown-preview',
 require 'plugins.alpha',
+require 'plugins.autocompletion',
 })
 
 vim.cmd.colorscheme "catppuccin"
