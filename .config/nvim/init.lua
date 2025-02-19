@@ -27,7 +27,7 @@ require('lazy').setup {
   require 'plugins.none-ls',
   require 'plugins.render-markdown',
   require 'plugins.markdown-preview',
-  require 'plugins.alpha',
+  require 'plugins.snacks',
   require 'plugins.autocompletion',
   require 'plugins.gitsigns',
   require 'plugins.indent-blankline',
