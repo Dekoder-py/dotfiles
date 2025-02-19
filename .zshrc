@@ -67,6 +67,9 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
+alias lg='lazygit'
+alias cat='bat'
+alias rcat='cat'
 alias c='clear'
 alias l='eza -lh --icons=auto'
 alias ls='eza -1 --icons=auto'
