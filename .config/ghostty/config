@@ -9,3 +9,5 @@ quit-after-last-window-closed = true
 
 shell-integration = zsh
 shell-integration-features = true
+
+window-decoration = none
