@@ -4,7 +4,6 @@ font-family = MesloLGS Nerd Font Mono
 font-size = 17
 
 theme = catppuccin-mocha 
-macos-icon = retro
 
 quit-after-last-window-closed = true
 confirm-close-surface = false
