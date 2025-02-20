@@ -2,8 +2,8 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-vim.keymap.set({ 'n', 'v'}, '<Space>', '<Nop>', { silent  = true })
-vim.api.nvim_set_keymap("i", "jj", "<Esc>", { noremap = false })
+vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+vim.api.nvim_set_keymap('i', 'jj', '<Esc>', { noremap = false })
 
 local opts = { noremap = true, silent = true }
 
@@ -70,3 +70,5 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, opts)
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, opts)
 
+-- AsciiDocPreview
+vim.keymap.set('n', '<leader>cp', ':AsciiDocPreview<CR>')
