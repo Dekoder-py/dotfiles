@@ -9,7 +9,7 @@ return {
       -- or leave it empty to use the default settings
       -- refer to the configuration section below
       bigfile = { enabled = true },
-      dashboard = { enabled = true, example = 'advanced' },
+      dashboard = { enabled = true, example = 'startify' },
       explorer = { enabled = true },
       indent = { enabled = true },
       input = { enabled = true },
