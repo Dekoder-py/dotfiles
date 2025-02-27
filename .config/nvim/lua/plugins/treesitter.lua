@@ -20,6 +20,7 @@ return { -- Highlight, edit, and navigate code
       'go',
       'gitignore',
       'graphql',
+      'swift',
       'yaml',
       'make',
       'cmake',
