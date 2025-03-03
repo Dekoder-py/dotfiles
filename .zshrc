@@ -84,6 +84,7 @@ alias src='source ~/.zshrc'
 alias esrc='vim ~/.zshrc'
 alias ..='cd ..'
 alias ...='cd ../..'
+alias shutdown='shutdown now'
 
 # Default editor
 export EDITOR=nvim
