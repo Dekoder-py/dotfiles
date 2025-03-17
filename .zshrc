@@ -85,6 +85,7 @@ alias esrc='vim ~/.zshrc'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias shutdown='shutdown now'
+alias blog='cd ~/blog/Dekoder-py.github.io/ && v'
 
 # Default editor
 export EDITOR=nvim

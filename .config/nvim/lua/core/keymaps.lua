@@ -74,8 +74,8 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, opts)
 vim.keymap.set('n', '<leader>cp', ':AsciiDocPreview<CR>')
 
 -- Snacks.nvim explorer
-vim.cmd [[nnoremap \ :lua Snacks.explorer()<cr>]]
-vim.keymap.set('n', '<leader>e', ':lua Snacks.explorer()<CR>')
+-- vim.cmd [[nnoremap \ :lua Snacks.explorer()<cr>]]
+-- vim.keymap.set('n', '<leader>e', ':lua Snacks.explorer()<CR>')
 
 -- Alpha dashboard
 vim.keymap.set('n', '<leader>a', '<cmd>Alpha<cr>')
