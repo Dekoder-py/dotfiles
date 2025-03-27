@@ -3,7 +3,7 @@ term = xterm-256color
 font-family = FiraCode Nerd Font
 font-size = 17
 
-theme = darcula 
+theme = dracula 
 
 quit-after-last-window-closed = true
 confirm-close-surface = false
