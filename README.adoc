@@ -1,0 +1,12 @@
+= My dotfiles repo
+
+== Instructions
+
+Clone the repo and run stow:
+
+```bash
+stow .
+```
+
+
+
