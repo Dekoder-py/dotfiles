@@ -1,6 +1,6 @@
 term = xterm-256color
 
-font-family = FiraCode Nerd Font
+font-family = JetBrainsMonoNL Nerd Font Propo
 font-size = 17
 
 theme = catppuccin-mocha 
