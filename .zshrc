@@ -68,7 +68,6 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
 alias ofd='open .'
-alias javatime='~/java-tmux.sh'
 alias lg='lazygit'
 alias cat='bat'
 alias rcat='cat'
