@@ -127,6 +127,10 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
 
+[ "$TERM" = "xterm-kitty" ] && alias ssh='kitty +kitten ssh' # fix ssh in kitty
+alias code-py='cd pyga && source .venv/bin/activate && v'
+alias venv='virtualenv venv --download'
+alias song='yt-dlp -t mp3'
 alias ofd='open .'
 alias lg='lazygit'
 alias cat='bat'
@@ -147,8 +151,15 @@ alias ...='cd ../..'
 alias shutdown='shutdown now'
 alias ff='fastfetch --config examples/11'
 
+# tmux-sessionizer
+alias tmux-sessionizer="$HOME/tmux-sessionizer/tmux-sessionizer"
+bindkey -s '^f' "tmux-sessionizer\n"
+
 # Default editor
 export EDITOR=nvim
+
+# cargo path
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # Shell integrations
 source <(fzf --zsh)
@@ -161,10 +172,33 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
-# To customize prompt, run `p10k configure` or edit ~/dotfiles/.p10k.zsh.
-[[ ! -f ~/dotfiles/.p10k.zsh ]] || source ~/dotfiles/.p10k.zsh
 
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 ff
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/kyleb/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
+
+# load env
+[ -f ~/.openai_env ] && source ~/.openai_env
+
+
+# To customize prompt, run `p10k configure` or edit ~/dotfiles/.p10k.zsh.
+[[ ! -f ~/dotfiles/.p10k.zsh ]] || source ~/dotfiles/.p10k.zsh
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+
+export GOPATH="$HOME/go"; export GOROOT="$HOME/.go"; export PATH="$GOPATH/bin:$PATH"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
+alias ggovm="$GOPATH/bin/g"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
