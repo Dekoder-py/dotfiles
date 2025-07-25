@@ -74,7 +74,7 @@ setopt autocd
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo fzf-tab command-not-found zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git sudo fzf-tab command-not-found zsh-completions zsh-autosuggestions zsh-syntax-highlighting zsh-bat)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -128,13 +128,9 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 # For a full list of active aliases, run `alias`.
 
 [ "$TERM" = "xterm-kitty" ] && alias ssh='kitty +kitten ssh' # fix ssh in kitty
-alias code-py='cd pyga && source .venv/bin/activate && v'
 alias venv='virtualenv venv --download'
-alias song='yt-dlp -t mp3'
 alias ofd='open .'
 alias lg='lazygit'
-alias cat='bat'
-alias rcat='cat'
 alias c='clear'
 alias l='eza -lh --icons=auto'
 alias ls='eza -1 --icons=auto'
@@ -148,7 +144,6 @@ alias src='source ~/.zshrc'
 alias esrc='vim ~/.zshrc'
 alias ..='cd ..'
 alias ...='cd ../..'
-alias shutdown='shutdown now'
 alias ff='fastfetch --config examples/11'
 
 # tmux-sessionizer
@@ -164,14 +159,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # Shell integrations
 source <(fzf --zsh)
 eval "$(zoxide init zsh --cmd cd)"
-function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
-}
 
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
