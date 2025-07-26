@@ -144,7 +144,7 @@ alias src='source ~/.zshrc'
 alias esrc='vim ~/.zshrc'
 alias ..='cd ..'
 alias ...='cd ../..'
-alias ff='fastfetch --config examples/11'
+alias ff='fastfetch'
 
 # tmux-sessionizer
 alias tmux-sessionizer="$HOME/tmux-sessionizer/tmux-sessionizer"
@@ -160,13 +160,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 source <(fzf --zsh)
 eval "$(zoxide init zsh --cmd cd)"
 
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
-ff
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -177,8 +171,6 @@ autoload -Uz compinit
 compinit
 # End of Docker CLI completions
 
-# load env
-[ -f ~/.openai_env ] && source ~/.openai_env
 
 
 # To customize prompt, run `p10k configure` or edit ~/dotfiles/.p10k.zsh.
@@ -186,6 +178,4 @@ compinit
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-
-export GOPATH="$HOME/go"; export GOROOT="$HOME/.go"; export PATH="$GOPATH/bin:$PATH"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
-alias ggovm="$GOPATH/bin/g"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
+fastfetch --config examples/11
