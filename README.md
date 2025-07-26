@@ -1,6 +1,6 @@
-= My dotfiles repo
+# My dotfiles repo
 
-== Instructions
+## Instructions
 
 Clone the repo and run stow:
 
