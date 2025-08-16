@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="refined"
+ZSH_THEME="edvardm"
 
 setopt correct
 setopt autocd
@@ -155,17 +155,16 @@ export EDITOR=nvim
 # cargo path
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# python path
+export PATH="$HOME/Library/Python/3.13/bin:$PATH"
+
 # Shell integrations
 source <(fzf --zsh)
 eval "$(zoxide init zsh --cmd cd)"
 
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
-ff
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
