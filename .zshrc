@@ -7,10 +7,6 @@ ZSH_THEME="edvardm"
 setopt correct
 setopt autocd
 
-# Uncomment one of the following lines to change the auto-update behavior
-zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-zstyle ':omz:update' frequency 13
-
 # Disable marking untracked files under VCS as dirty.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
