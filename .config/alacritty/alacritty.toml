@@ -1,0 +1,15 @@
+general.import = [ "~/.config/alacritty/catppuccin-mocha.toml"]
+
+[env]
+TERM = "xterm-256color"
+
+
+[window]
+# decorations = ""
+startup_mode = "Maximized"
+option_as_alt = "OnlyLeft"
+
+[font]
+normal = { family = "DankMono Nerd Font Mono", style = "Regular" }
+size = 26
+
