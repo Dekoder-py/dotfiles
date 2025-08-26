@@ -53,21 +53,6 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
-# Compile C++ code
-compile() {
-    if [[ -z "$1" ]]; then
-        echo "Usage: \ncompile <source.cpp> [output]"
-        return 1
-    fi
-
-    input="$1"
-    # If second argument is provided, use it; otherwise remove .cpp from input
-    output="${2:-${input%.cpp}}"
-
-    g++ --std=c++20 -o "$output" "$input"
-}
-
-
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
 
