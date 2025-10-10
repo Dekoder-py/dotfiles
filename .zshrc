@@ -34,6 +34,9 @@ bindkey -e
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 
+# VI MODE
+set -o vi
+
 # History
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
