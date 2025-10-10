@@ -1,0 +1,6 @@
+font-family = DankMono NF Mono
+font-size = 26
+
+theme = Catppuccin Mocha
+
+quit-after-last-window-closed = true
