@@ -5,6 +5,8 @@
 Clone the repo and run stow:
 
 ```bash
+git clone https://github.com/Dekoder-py/dotfiles.git
+cd dotfiles
 stow .
 ```
 
