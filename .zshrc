@@ -83,6 +83,8 @@ alias esrc='nvim ~/.zshrc'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ff='fastfetch --config examples/11'
+alias oo='cd ~/vaults/Core/'
+alias or='nvim ~/vaults/Core/inbox/*.md'
 
 # tmux-sessionizer
 alias tmux-sessionizer="$HOME/tmux-sessionizer/tmux-sessionizer"
