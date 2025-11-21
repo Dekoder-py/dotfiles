@@ -131,4 +131,4 @@ function y() {
 }
 
 # fzf
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude Library --exclude Applications --exclude ".cache"' # fzf will use fd, inculding hidden and excluding large folders
+export FZF_DEFAULT_COMMAND='fd --hidden --exclude Library --exclude Applications --exclude ".cache"' # fzf will use fd, inculding hidden and excluding large folders
