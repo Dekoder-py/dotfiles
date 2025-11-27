@@ -86,6 +86,11 @@ alias ff='fastfetch --config examples/11'
 alias oo='cd ~/vaults/Core/'
 alias or='nvim ~/vaults/Core/inbox/*.md'
 
+# ghostty ssh fix
+if [[ "$TERM" == "xterm-ghostty" ]]; then
+    alias ssh='TERM=xterm-256color ssh'
+fi
+
 # tmux-sessionizer
 alias tmux-sessionizer="$HOME/tmux-sessionizer/tmux-sessionizer"
 bindkey -s '^f' "tmux-sessionizer\n"
@@ -103,8 +108,6 @@ export PATH="$HOME/Library/Python/3.13/bin:$PATH"
 source <(fzf --zsh)
 eval "$(zoxide init zsh --cmd cd)"
 
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export NVM_DIR="$HOME/.nvm"
@@ -115,10 +118,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -f ~/.openai_env ] && source ~/.openai_env
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-
-export GOPATH="$HOME/go"; export GOROOT="$HOME/.go"; export PATH="$GOPATH/bin:$PATH"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
-alias ggovm="$GOPATH/bin/g"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
 
 # Yazi shell wrapper
 # allows changing cwd when exiting
