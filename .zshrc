@@ -85,6 +85,8 @@ alias ...='cd ../..'
 alias ff='fastfetch --config examples/11'
 alias oo='cd ~/vaults/Core/'
 alias or='nvim ~/vaults/Core/inbox/*.md'
+alias update-flake='cd /etc/nix-darwin && nix flake update && git add flake.lock && git commit && git push'
+alias rebuild='sudo darwin-rebuild switch'
 
 # ghostty ssh fix
 if [[ "$TERM" == "xterm-ghostty" ]]; then
