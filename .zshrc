@@ -83,7 +83,7 @@ alias esrc='nvim ~/.zshrc'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ff='fastfetch --config examples/11'
-alias oo='cd ~/obsidian && nvim"
+alias oo='cd ~/obsidian && nvim'
 
 # ghostty ssh fix
 if [[ "$TERM" == "xterm-ghostty" ]]; then
