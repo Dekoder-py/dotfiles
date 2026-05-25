@@ -83,10 +83,7 @@ alias esrc='nvim ~/.zshrc'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ff='fastfetch --config examples/11'
-alias oo='cd ~/vaults/Core/'
-alias or='nvim ~/vaults/Core/inbox/*.md'
-alias update-flake='cd /etc/nix-darwin && nix flake update && git add flake.lock && git commit && git push'
-alias rebuild='sudo darwin-rebuild switch'
+alias oo='cd ~/obsidian && nvim"
 
 # ghostty ssh fix
 if [[ "$TERM" == "xterm-ghostty" ]]; then
@@ -131,10 +128,16 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+export PATH="/opt/homebrew/bin:$PATH"
+
+# cargo path
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # fzf
 export FZF_DEFAULT_COMMAND='fd --hidden --exclude Library --exclude Applications --exclude ".cache"' # fzf will use fd, inculding hidden and excluding large folders
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=(/Users/kyle/.docker/completions $fpath)
+fpath=(/Users/kyle/.zsh/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
